@@ -1,0 +1,394 @@
+{
+  "Resources": {
+    "TestCdkBucket08289F93": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "testando-cdk",
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/TestCdkBucket/Resource"
+      }
+    },
+    "testCdkFunctionServiceRole4C0DB944": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkFunction/ServiceRole/Resource"
+      }
+    },
+    "testCdkFunction7829EE2A": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3Bucket27A38966"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3VersionKey8995F47B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3VersionKey8995F47B"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "test.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "testCdkFunctionServiceRole4C0DB944",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "TEST": "oneTwo"
+          }
+        }
+      },
+      "DependsOn": [
+        "testCdkFunctionServiceRole4C0DB944"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkFunction/Resource",
+        "aws:asset:path": "asset.c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77",
+        "aws:asset:property": "Code"
+      }
+    },
+    "testCdkApi7BD46117": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "Test CDK Api"
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Resource"
+      }
+    },
+    "testCdkApiCloudWatchRole9F11D054": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/CloudWatchRole/Resource"
+      }
+    },
+    "testCdkApiAccountAA79C238": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "testCdkApiCloudWatchRole9F11D054",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "testCdkApi7BD46117"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Account"
+      }
+    },
+    "testCdkApiDeploymentFF40FA2C5c5dea8e88d29a50f663a82d1160bb9c": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "testCdkApi7BD46117"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "testCdkApitestGETA1501C43",
+        "testCdkApitest9EB1C33A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Deployment/Resource"
+      }
+    },
+    "testCdkApiDeploymentStageprod29D403EA": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "testCdkApi7BD46117"
+        },
+        "DeploymentId": {
+          "Ref": "testCdkApiDeploymentFF40FA2C5c5dea8e88d29a50f663a82d1160bb9c"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/DeploymentStage.prod/Resource"
+      }
+    },
+    "testCdkApitest9EB1C33A": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "testCdkApi7BD46117",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "test",
+        "RestApiId": {
+          "Ref": "testCdkApi7BD46117"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Default/test/Resource"
+      }
+    },
+    "testCdkApitestGETApiPermissionHelloWorldStacktestCdkApi568BB48CGETtest08B91AEB": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "testCdkFunction7829EE2A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "testCdkApi7BD46117"
+              },
+              "/",
+              {
+                "Ref": "testCdkApiDeploymentStageprod29D403EA"
+              },
+              "/GET/test"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Default/test/GET/ApiPermission.HelloWorldStacktestCdkApi568BB48C.GET..test"
+      }
+    },
+    "testCdkApitestGETApiPermissionTestHelloWorldStacktestCdkApi568BB48CGETtest453BEA26": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "testCdkFunction7829EE2A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "testCdkApi7BD46117"
+              },
+              "/test-invoke-stage/GET/test"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Default/test/GET/ApiPermission.Test.HelloWorldStacktestCdkApi568BB48C.GET..test"
+      }
+    },
+    "testCdkApitestGETA1501C43": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "testCdkApitest9EB1C33A"
+        },
+        "RestApiId": {
+          "Ref": "testCdkApi7BD46117"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "testCdkFunction7829EE2A",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "HelloWorldStack/testCdkApi/Default/test/GET/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3Bucket27A38966": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77\""
+    },
+    "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3VersionKey8995F47B": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77\""
+    },
+    "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77ArtifactHashD8CD4DD0": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77\""
+    }
+  },
+  "Outputs": {
+    "testCdkApiEndpointB5DB6716": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "testCdkApi7BD46117"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "testCdkApiDeploymentStageprod29D403EA"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}

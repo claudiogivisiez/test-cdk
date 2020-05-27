@@ -1,0 +1,574 @@
+{
+  "version": "4.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "HelloWorldStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "HelloWorldStack.template.json"
+      },
+      "metadata": {
+        "/HelloWorldStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77",
+              "id": "c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77",
+              "packaging": "zip",
+              "sourceHash": "c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77",
+              "s3BucketParameter": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3Bucket27A38966",
+              "s3KeyParameter": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3VersionKey8995F47B",
+              "artifactHashParameter": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77ArtifactHashD8CD4DD0"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/construct-compat.ts:400:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:152:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "HelloWorldStack.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack.ts:537:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:125:40)",
+              "AssetCode.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/TestCdkBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TestCdkBucket08289F93",
+            "trace": [
+              "new Bucket (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1049:22)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:9:9)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkFunctionServiceRole4C0DB944",
+            "trace": [
+              "new Role (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-iam/lib/role.ts:319:18)",
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:478:31)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkFunction7829EE2A",
+            "trace": [
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:493:35)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/AssetParameters/c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3Bucket27A38966",
+            "trace": [
+              "new FileAssetParameters (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "HelloWorldStack.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack.ts:537:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:125:40)",
+              "AssetCode.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/AssetParameters/c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77S3VersionKey8995F47B",
+            "trace": [
+              "new FileAssetParameters (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "HelloWorldStack.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack.ts:537:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:125:40)",
+              "AssetCode.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/AssetParameters/c95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc95b049040ea5e3b0ff6dddda306d6d75b6f9d7cb28a870e60db2e34276baa77ArtifactHashD8CD4DD0",
+            "trace": [
+              "new FileAssetParameters (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "HelloWorldStack.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack.ts:537:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:125:40)",
+              "AssetCode.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function.ts:488:29)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:14:30)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApi7BD46117",
+            "trace": [
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:460:22)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApiCloudWatchRole9F11D054",
+            "trace": [
+              "new Role (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-iam/lib/role.ts:319:18)",
+              "RestApi.configureCloudWatchRole (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:320:18)",
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:477:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApiAccountAA79C238",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:325:22)",
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:477:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApiDeploymentFF40FA2C5c5dea8e88d29a50f663a82d1160bb9c",
+            "trace": [
+              "new Deployment (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:69:21)",
+              "RestApi.configureDeployment (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:336:32)",
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:480:10)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApiDeploymentStageprod29D403EA",
+            "trace": [
+              "new Stage (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:236:22)",
+              "RestApi.configureDeployment (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:346:30)",
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:480:10)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApiEndpointB5DB6716",
+            "trace": [
+              "RestApi.configureDeployment (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:351:7)",
+              "new RestApi (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:480:10)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Default/test/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApitest9EB1C33A",
+            "trace": [
+              "new Resource (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:387:22)",
+              "RootResource.addResource (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:171:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:27:39)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Default/test/GET/ApiPermission.HelloWorldStacktestCdkApi568BB48C.GET..test": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApitestGETApiPermissionHelloWorldStacktestCdkApi568BB48CGETtest08B91AEB",
+            "trace": [
+              "Function.addPermission (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:61:18)",
+              "Method.renderIntegration (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:261:17)",
+              "new Method (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:201:25)",
+              "Resource.addMethod (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:175:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:32:22)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Default/test/GET/ApiPermission.Test.HelloWorldStacktestCdkApi568BB48C.GET..test": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApitestGETApiPermissionTestHelloWorldStacktestCdkApi568BB48CGETtest453BEA26",
+            "trace": [
+              "Function.addPermission (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:69:20)",
+              "Method.renderIntegration (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:261:17)",
+              "new Method (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:201:25)",
+              "Resource.addMethod (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:175:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:32:22)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ],
+        "/HelloWorldStack/testCdkApi/Default/test/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testCdkApitestGETA1501C43",
+            "trace": [
+              "new Method (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:208:22)",
+              "Resource.addMethod (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:175:12)",
+              "new HelloWorldStack (/Users/claudio.givisiez/Documents/test-cdk/hello-world/lib/hello-world-stack.ts:32:22)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/bin/hello-world.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Module.m._compile (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "main (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/claudio.givisiez/Documents/test-cdk/hello-world/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:689:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)",
+              "Module.load (internal/modules/cjs/loader.js:599:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:538:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:530:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:742:12)",
+              "findNodeScript.then.existing (/Users/claudio.givisiez/.nvm/versions/node/v10.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.41.0",
+      "@aws-cdk/cx-api": "1.41.0",
+      "@aws-cdk/cloud-assembly-schema": "1.41.0",
+      "@aws-cdk/cdk-assets-schema": "1.41.0",
+      "@aws-cdk/aws-s3": "1.41.0",
+      "@aws-cdk/aws-events": "1.41.0",
+      "@aws-cdk/aws-iam": "1.41.0",
+      "@aws-cdk/region-info": "1.41.0",
+      "@aws-cdk/aws-kms": "1.41.0",
+      "@aws-cdk/aws-lambda": "1.41.0",
+      "@aws-cdk/aws-cloudwatch": "1.41.0",
+      "@aws-cdk/aws-ec2": "1.41.0",
+      "@aws-cdk/aws-ssm": "1.41.0",
+      "@aws-cdk/aws-logs": "1.41.0",
+      "@aws-cdk/aws-sqs": "1.41.0",
+      "@aws-cdk/aws-s3-assets": "1.41.0",
+      "@aws-cdk/assets": "1.41.0",
+      "@aws-cdk/aws-apigateway": "1.41.0",
+      "jsii-runtime": "node.js/v10.15.0"
+    }
+  }
+}
